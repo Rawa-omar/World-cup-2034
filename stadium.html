@@ -147,35 +147,46 @@
             </div>
         </section>
 
+        <div id="footer-container"></div>
 
-
-    <script>
-
-
-        async function loadContent() {
-            try {
-                // تحميل الهيدر
-                const headerResponse = await fetch('header.html');
-                if (!headerResponse.ok) {
-                    throw new Error('فشل في تحميل الهيدر');
+        <script>
+            async function loadContent() {
+                try {
+                    const headerResponse = await fetch('header.html');
+                    if (!headerResponse.ok) {
+                        throw new Error('فشل في تحميل الهيدر');
+                    }
+                    const headerData = await headerResponse.text();
+                    document.getElementById('header-container').innerHTML = headerData;
+                } catch (error) {
+                    console.error('خطأ في تحميل المحتوى:', error);
                 }
-                const headerData = await headerResponse.text();
-                document.getElementById('header-container').innerHTML = headerData;
-
-                // تحميل الفوتر
-                const footerResponse = await fetch('footer.html');
-                if (!footerResponse.ok) {
-                    throw new Error('فشل في تحميل الفوتر');
-                }
-                const footerData = await footerResponse.text();
-                document.getElementById('footer-container').innerHTML = footerData;
-            } catch (error) {
-                console.error('خطأ في تحميل المحتوى:', error);
             }
-        }
-
-        document.addEventListener('DOMContentLoaded', loadContent);
-    </script>
+    
+            document.addEventListener('DOMContentLoaded', loadContent);
+    
+            async function loadFooter() {
+                try {
+                    const footerResponse = await fetch('footer.html');
+                    if (!footerResponse.ok) {
+                        throw new Error('فشل في تحميل الفوتر');
+                    }
+                    const footerData = await footerResponse.text();
+                    document.getElementById('footer-container').innerHTML = footerData;
+                } catch (error) {
+                    console.error('خطأ في تحميل الفوتر:', error);
+                }
+            }
+    
+            document.addEventListener('DOMContentLoaded', () => {
+                loadContent();
+                loadFooter();
+            });
+    
+    
+    
+    
+        </script>
 </body>
 
 </html>
