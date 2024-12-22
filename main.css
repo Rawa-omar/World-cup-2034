@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500;600;700&display=swap');
+
+
+body {
+    font-family: 'Rubik', serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #F6F4F0;
+    color: #4C585B;
+    background: radial-gradient(circle, #F6F4F0, #A5BFCC);
+    overflow-x: hidden;
+
+}
+
+
+
+
+.card {
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(21, 21, 21, 0.1);
+    background-color: #c0cfd4;
+    text-align: right;
+    margin: 15px;
+    position: relative;
+    height: 130px;
+    margin-right: 70px;
+    color: #4C585B;
+}
+
+.card img {
+    margin: 10px auto;
+    width: 80px;
+    height: auto;
+
+
+}
+
+.card h3 {
+    font-size: 30px;
+    margin-right: 10px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.special-cards .card:hover {
+    background-color: #7E99A3;
+    transform: scale(1.09);
+    box-shadow: 0 10px 20px rgba(0.1, 0.1, 0.1, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* header  */
+#navlist li {
+    font-size: 20px;
+}
+
+#navlist {
+    display: flex;
+    gap: 40px;
+    margin-right: -50%;
+    padding: 0;
+    list-style: none;
+}
+
+
+#navlist li a {
+    color: #4C585B;
+    text-decoration: none;
+}
+
+#navlist li a:hover {
+    color: #F4EDD3;
+}
+
+/* footer  */
+
+  .footer {
+    background-color: #16222a;
+    color: #F4EDD3;
+    padding: 0.5rem 1rem; 
+    font-family: 'Rubik', serif;
+    font-size: 0.9rem; 
+    border-top: 2px solid #3a6073;
+    margin-top: 10%;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-name {
+    margin: 0;
+    font-weight: bold;
+    margin-right: 5%;
+}
+
+.social-icons {
+    display: flex;
+    gap: 2rem; 
+    margin-left: 5%;
+}
+
+.icon {
+    color: #F4EDD3;
+    text-decoration: none;
+    font-size: 1.3rem; 
+    transition: color 0.3s ease;
+}
+
+.icon:hover {
+    color: #3a6073;
+}
+
+
+
+/* Transport page */
+
+.timeline {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    position: relative;
+    padding: 2rem 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: #A5BFCC;
+    z-index: 1;
+}
+
+.timeline-item {
+    position: relative;
+    text-align: center;
+    cursor: pointer;
+    z-index: 2;
+
+}
+
+.timeline-item .icon {
+    width: 80px;
+    height: 80px;
+    background-color: #A5BFCC;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+    font-size: 2rem;
+}
+
+.timeline-item .icon:hover {
+    transform: scale(1.2);
+}
+
+.timeline-item h5 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.details {
+    background: #c0cfd4;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.details p {
+    font-size: 1rem;
+    color: #4C585B;
+}
+
+.details table {
+    width: 100%;
+    margin-top: 1rem;
+
+}
+
+.details th,
+.details td {
+    text-align: center;
+    padding: 0.5rem;
+    background-color: #F6F4F0;
+}
+
+.details th {
+    background-color: #A5BFCC;
+    color: #4C585B;
+}
+
+
+
+
+
+/* landing page */
+h1 {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 3rem;
+   
+}
+
+.circle-container {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    margin: 3rem auto;
+    margin-right: -250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 18rem;
+    height: 18rem;
+    transform: translate(-50%, -50%);
+    border: 2px dashed rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+}
+
+.card-link {
+    position: absolute;
+    text-align: center;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    background: #ffffff22;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, background 0.3s ease;
+
+}
+
+.card-link:hover {
+    transform: scale(1.2);
+    background: #7E99A3;
+}
+
+.card-link img {
+    width: 50px;
+    height: 50px;
+}
+
+.card-link h3 {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    color: #4C585B;
+}
+
+
+.card-link:nth-child(5) {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0deg) translateY(-9rem) rotate(0deg);
+    /* كارد النقل  */
+}
+
+.card-link:nth-child(6) {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(90deg) translateY(-9rem) rotate(-90deg);
+    /* كارد الملاعب */
+}
+
+.card-link:nth-child(3) {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(180deg) translateY(-8rem) rotate(-180deg);
+    /* كارد المباريات */
+}
+
+.card-link:nth-child(4) {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(270deg) translateY(-8rem) rotate(-270deg);
+    /* كارد الفنادق*/
+}
+
+
+
+
+.image-container {
+    position: absolute;
+    top: 50%;
+    left: 5%; 
+    transform: translate(-50%, -50%);
+}
+
+.image-container img {
+    width: 500px; 
+    height: 600px; 
+    border-radius: 50%; 
+    object-fit: cover; 
+    object-position: left bottom; 
+}
+
